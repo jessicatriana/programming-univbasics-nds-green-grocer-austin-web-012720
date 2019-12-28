@@ -61,7 +61,8 @@ def apply_clearance(cart) #this method *SHOULD* update the cart
  index = 0 
  while index < cart.length do 
   if cart[index][:clearance] #if item's clearance key is true
-     cart[index][:price] = 
+     cart[index][:price] = (cart[index][:price] - (cart[index][:price] * 0.20)).round(2)
+    end
      index += 1
  end 
  cart
