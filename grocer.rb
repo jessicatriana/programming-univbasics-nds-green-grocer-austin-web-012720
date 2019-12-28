@@ -10,8 +10,6 @@ while index < collection.length do
 end 
 end
 
-
-
 def consolidate_cart(cart)
   # Consult README for inputs and outputs
   #
