@@ -35,8 +35,8 @@ def apply_coupons(cart, coupons)  #Remember, this method *SHOULD* update the car
   index = 0 
   while index < coupons.length do 
     cart_item = find_item_by_name_in_collection(coupons[index][:item], cart) #finds item on the coupon and sees if it's in the cart
-    couponed_item_name = "#{coupons[counter][:item]} W/COUPON" 
-    cart_item_with_coupon = find_item_by_name_in_collection(couponed_item_name, cart)
+    couponed_item_name = "#{coupons[counter][:item]} W/COUPON" #creates a variable for the W/COUPON items using string interpolation
+    cart_item_with_coupon = find_item_by_name_in_collection(couponed_item_name, cart) #variable that holds couponed item's name
     
     index += 1 
   end
