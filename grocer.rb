@@ -31,10 +31,13 @@ end
   new_cart  # return [{:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 2}]
 end
 
-def apply_coupons(cart, coupons)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This method **should** update cart
+def apply_coupons(cart, coupons)  #Remember, this method *SHOULD* update the cart
+  index = 0 
+  while index < coupons.length do 
+    cart_item = find_item_by_name_in_collection(coupons[index][:item], cart) #finds item on the coupon and sees if it's in the cart
+    
+    index += 1 
+  end
 end
 
 def apply_clearance(cart)
