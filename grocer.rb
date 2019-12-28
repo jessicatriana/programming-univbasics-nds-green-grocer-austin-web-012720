@@ -80,7 +80,7 @@ def checkout(cart, coupons)
     index += 1
   end
   if total > 100 
-    total -= (total - 0.10) #subtracts 10% if the total is over 100
+    total -= (total * 0.10) #subtracts 10% if the total is over 100
 end
 total
 end
