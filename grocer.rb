@@ -4,13 +4,12 @@ def find_item_by_name_in_collection(name, collection)
  binding.pry
  index = 0
 
-    if name == collection[index][:item]
-      collection[index]
+    if name != collection[index][:item]
+     nil
     else
-      nil
-    
-  # index += 1
-end
+       collection[index]
+    end
+  index += 1
 end 
 
   # Implement me first!
