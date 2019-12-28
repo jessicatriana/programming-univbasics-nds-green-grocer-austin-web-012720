@@ -11,7 +11,7 @@ def find_item_by_name_in_collection(name, collection) #looks for an item
 end
 
 def consolidate_cart(cart)
-  new_cart = []
+  new_cart = [] #returns an array for the new cart
   index = 0 
 while index < cart.length do 
   new_cart_item = find_item_by_name_in_collection(cart[index][:item], new_cart) #returns item if it finds it, otherwise returns nil
