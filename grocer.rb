@@ -41,7 +41,15 @@ def apply_coupons(cart, coupons)  #Remember, this method *SHOULD* update the car
       if cart_item_with_coupon 
         cart_item_with_coupon[:count] += coupons[index][:num]
         cart_item[:count] -= coupons[index][:num]
-        
+      else
+        cart_item_with_coupon = {
+          :item => couponed_item_name,
+          :price => coupons[index][:cost] / coupons[index][:num],
+          :count => coupons[index][:num],
+          :clearace => cart_item[clearance]
+        }
+        cart << cart_item_with_coupon
+        cart_item[:count] -= coupons[index][:num]
       end
       end
     index += 1 
