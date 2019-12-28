@@ -20,7 +20,7 @@ index += 1
 end
   new_cart
 end
-# return [{}]
+# return [{:item => "AVOCADO", :price =>}]
 
 
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
