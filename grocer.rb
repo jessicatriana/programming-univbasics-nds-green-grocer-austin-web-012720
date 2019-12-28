@@ -69,13 +69,15 @@ def apply_clearance(cart) #this method *SHOULD* update the cart
 end
 
 def checkout(cart, coupons)
-  # Consult README for inputs and outputs
-  #
-  # This method should call
+  consolidated cart = consolidate_cart(cart)
+  couponed_cart = apply_coupons(consolidated_cart)
+  clearance_cart = apply_clearance(couponed_cart)
+  
+end
+ # This method should call
   # * consolidate_cart
   # * apply_coupons
   # * apply_clearance
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
-end
