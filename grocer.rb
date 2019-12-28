@@ -54,6 +54,7 @@ def apply_coupons(cart, coupons)  #Remember, this method *SHOULD* update the car
       end
     index += 1 
   end
+  cart
 end
 
 def apply_clearance(cart)
