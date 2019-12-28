@@ -2,17 +2,19 @@ require 'pry'
 
 def find_item_by_name_in_collection(name, collection)
  index = 0
-while index < collection.length do
+ while index < collection.length do
     if collection[index][:item] == name 
       return collection[index]
-    end
+      end
   index += 1
-end 
+ end 
 end
 
 def consolidate_cart(cart)
   new_cart = []
-
+  index = 0 
+while index < cart.length do 
+  
 new_cart <<
 index += 1
 end
