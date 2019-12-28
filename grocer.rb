@@ -21,9 +21,11 @@ else
   new_cart_item = {
     :item => cart[index][:item],
     :price => cart[index][:price],
-    :clearance =
+    :clearance => cart[index][:clearance],
+    :count => 1  #adds the :count key/value pair and sets its value to 1
   }
-new_cart <<
+new_cart << new_cart_item  #shoves the new item into the new cart, including the count
+end
 index += 1
 end
   new_cart
