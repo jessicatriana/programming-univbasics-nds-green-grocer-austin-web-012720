@@ -11,6 +11,7 @@ while index < collection.length do
   index += 1
 end 
 end
+end
 
   # Implement me first!
   #
