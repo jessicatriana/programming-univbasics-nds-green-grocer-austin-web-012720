@@ -1,6 +1,6 @@
 require 'pry'
 
-def find_item_by_name_in_collection(name, collection)
+def find_item_by_name_in_collection(name, collection) #looks for an item
  index = 0
  while index < collection.length do
     if collection[index][:item] == name 
@@ -14,7 +14,15 @@ def consolidate_cart(cart)
   new_cart = []
   index = 0 
 while index < cart.length do 
-  
+  new_cart_item = find_item_by_name_in_collection(cart[index][:item], new_cart) #returns item if it finds it, otherwise returns nil
+  if new_cart_item #if this variable has a truthy value (anything in Ruby except for nil and false)
+  new_cart_item[:count] += 1
+else 
+  new_cart_item = {
+    :item => cart[index][:item],
+    :price => cart[index][:price],
+    :clearance =
+  }
 new_cart <<
 index += 1
 end
