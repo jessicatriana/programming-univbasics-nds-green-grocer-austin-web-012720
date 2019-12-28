@@ -39,8 +39,8 @@ def apply_coupons(cart, coupons)  #Remember, this method *SHOULD* update the car
     cart_item_with_coupon = find_item_by_name_in_collection(couponed_item_name, cart) #variable that holds couponed item's name
     if cart_item && cart_item[:count] >= coupons[index][:num] #returns either a cart item or nil (if nil, the if statement won't execute)
       if cart_item_with_coupon 
-        cart_item_with_coupon[:count] += 1 
-        
+        cart_item_with_coupon[:count] += coupons[index][:num]
+        cart_item[:count] -= coupons[index][:num]
         
       end
       end
