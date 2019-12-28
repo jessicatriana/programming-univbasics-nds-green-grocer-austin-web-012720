@@ -28,13 +28,11 @@ new_cart << new_cart_item  #shoves the new item into the new cart, including the
 end
 index += 1
 end
-  new_cart
+  new_cart  # return [{:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 2}]
 end
-# return [{:item => "AVOCADO", :price => 3.00, :clearance => true, :count => 2}]
 
 
-  # REMEMBER: This returns a new Array that represents the cart. Don't merely
-  # change `cart` (i.e. mutate) it. It's easier to return a new thing.
+
 
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
