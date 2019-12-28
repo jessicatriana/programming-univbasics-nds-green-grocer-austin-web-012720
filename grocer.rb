@@ -57,10 +57,14 @@ def apply_coupons(cart, coupons)  #Remember, this method *SHOULD* update the car
   cart
 end
 
-def apply_clearance(cart)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This method **should** update cart
+def apply_clearance(cart) #this method *SHOULD* update the cart
+ index = 0 
+ while index < cart.length do 
+  if cart[index][:clearance] #if item's clearance key is true
+     cart[index][:price] = 
+     index += 1
+ end 
+ cart
 end
 
 def checkout(cart, coupons)
