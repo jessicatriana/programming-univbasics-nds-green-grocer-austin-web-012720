@@ -3,7 +3,7 @@ require 'pry'
 def find_item_by_name_in_collection(name, collection)
 # binding.pry
  index = 0
-
+while index < collection.length do
     if name != collection[index][:item]
      nil
     else
